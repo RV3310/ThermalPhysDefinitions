@@ -1,0 +1,183 @@
+
+/*******************************
+GENERAL STYLING
+********************************/
+
+body {
+  background: #161718;
+  font-family: 'Indie Flower', cursive;
+}
+
+h1,
+header > p {
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+header > p {
+  font-size: 20px;
+}
+
+p {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+section {
+  margin-top: 40px;
+
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.flip-container {
+  -webkit-perspective: 1000;
+          perspective: 1000;
+  margin: 10px;
+  cursor: pointer;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 25px;
+}
+
+.flip-container .flippable {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  }
+
+.flip-container .flipme {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.flip-container,
+.front,
+.back {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 5px;
+}
+
+.front,
+.back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.front {
+  z-index: 2;
+  color: white;
+}
+
+.front span {
+  font-size: 30px;
+  font-family: 'Indie Flower', cursive;
+}
+
+.back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  font-size: 18px;
+  border: 1px solid;
+  font-family: 'Indie Flower', cursive;
+  color: white;
+}
+
+.back::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #eee;
+  -webkit-box-shadow: 0 0 1px 1px #bbb, inset 0 0 7px rgba(0,0,0,0.3);
+          box-shadow: 0 0 1px 1px #bbb, inset 0 0 7px rgba(0,0,0,0.3)
+}
+
+.back::-webkit-scrollbar {
+  width: 5px;
+  height: 70px;
+  background-color: rgb(172,47,158);
+}
+
+.back::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 1px 1px #5C6670;
+          box-shadow: inset 0 0 1px 1px #5C6670;
+}
+
+
+
+.ac-bicycle .front {
+  background: #1189d1;
+}
+.ac-bicycle .back {
+  background: #052c44;
+  border-color: #86cbf5;
+}
+.ac-car .front {
+  background: #18b755;
+}
+.ac-car .back {
+  background: #063016;
+  border-color: #7aeea7;
+}
+.ac-truck .front {
+  background: #f3b50b;
+}
+.ac-truck .back {
+  background: #614804;
+  border-color: #fbe19c;
+}
+.ac-umbrella .front {
+  background: #ef4809;
+}
+.ac-umbrella .back {
+  background: #5c1c03;
+  border-color: #fbb296;
+}
+.ac-plane .front {
+  background: #E82C0C;
+}
+.ac-plane .back {
+  background: #571004;
+  border-color: #f9a294;
+}
+
+footer > span {
+  color: white;
+  font-family: 'Indie Flower', cursive;
+  font-size: 30px;
+
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+}
